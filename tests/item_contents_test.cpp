@@ -11,9 +11,9 @@
 #include "type_id.h"
 #include "units.h"
 
-static const itype_id itype_crowbar( "crowbar" );
-static const itype_id itype_log( "log" );
-static const itype_id itype_purse( "purse" );
+static const itype_id itype_crowbar( "test_crowbar" );
+static const itype_id itype_log( "test_log" );
+static const itype_id itype_purse( "test_purse" );
 
 TEST_CASE( "item_contents" )
 {
@@ -26,10 +26,10 @@ TEST_CASE( "item_contents" )
     CHECK( tool_belt.weight( true ) == tool_belt.type->weight );
     CHECK( tool_belt.weight( false ) == tool_belt.type->weight );
 
-    item hammer( "hammer" );
-    item tongs( "tongs" );
-    item wrench( "wrench" );
-    item crowbar( "crowbar" );
+    item hammer( "test_hammer" );
+    item tongs( "test_tongs" );
+    item wrench( "test_wrench" );
+    item crowbar( "test_crowbar" );
 
     ret_val<bool> i1 = tool_belt.put_in( hammer, item_pocket::pocket_type::CONTAINER );
     ret_val<bool> i2 = tool_belt.put_in( tongs, item_pocket::pocket_type::CONTAINER );
